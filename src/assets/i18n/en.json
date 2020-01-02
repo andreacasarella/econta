@@ -1,0 +1,17 @@
+{
+    "app": {
+        "title": "ECONTA en"
+    },
+    "translationsAvailability": "Traduzioni disponibili",
+    "components": {
+        "paginator": {
+            "itemsPerPage": "Risultati per pagina:",
+            "next": "Pagina successiva",
+            "prev": "Pagina precedente",
+            "first": "Prima pagina",
+            "last": "Ultima pagina",
+            "rangePage1": "0 di {{length}}",
+            "rangePage2": "{{startIndex}} - {{endIndex}} di {{length}}"
+        }
+    }
+}

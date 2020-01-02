@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@import 'econta-colors.scss';
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+// include base Material styles
+@include mat-core();
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: mat-light-theme($primary-palette,
+$accent-palette,
+$warn-palette);
+// include theme
+@include angular-material-theme($theme);

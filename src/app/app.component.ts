@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TestService } from './test.service';
+import { Moment } from 'moment';
+import * as moment from 'moment';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +10,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'eConta';
+  sidenavOverMode: 'side' | 'over' = 'side';
+  isSmallScreen: boolean;
+
+  @ViewChild(MatSidenav, {static: false}) private _sidenav: MatSidenav;
+
+  constructor(
+    private testService: TestService
+  ) {
+    this.testService.getList().subscribe(result =>{
+      console.log(result);
+    });
+    //this.testService.testPost().subscribe(result =>{
+    //  console.log(result);
+    //});
+    //this.testService.testDelete().subscribe(result =>{
+    //  console.log(result);
+    //});
+  }
+
+  toggleSidenav() {
+    this._sidenav.toggle();
+  }
+
 }

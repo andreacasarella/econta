@@ -1,0 +1,16 @@
+// disable max-height limitation so that the dialog will scroll on devices with little vertical space
+.mail-address-dialog,
+.mail-address-dialog-md,
+.mail-address-dialog-sm,
+.mail-address-dialog-sm,
+.mail-address-dialog-xs {
+  .mat-dialog-content {
+    max-height: none !important;
+  }
+}
+.mail-address-dialog-sm,
+.mail-address-dialog-md {
+  .mat-dialog-content {
+    min-width: 50vw;
+  }
+}

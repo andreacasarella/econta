@@ -1,0 +1,19 @@
+@import 'variables';
+// dependencies shared by various Bootstrap modules
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/badge";
+// Bootstrap utilities (e.g.: flex and more) {@link https://getbootstrap.com/docs/4.1/utilities}
+@import "~bootstrap/scss/utilities";
+// Bootstrap Grid
+@import "~bootstrap/scss/grid";
+// without this grid does not work properly (taken from Bootstrap Reboot, all other rules in that module interfere with Material)
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// disable a few Bootstrap rules interfering with Material
+@import 'reset';
